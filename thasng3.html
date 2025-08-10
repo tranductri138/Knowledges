@@ -1,0 +1,111 @@
+<h1>Tháng 3 – Deep Learning & Fine-tune LLM</h1>
+
+<h2>🎯 Mục tiêu tháng</h2>
+<ul>
+  <li>Hiểu cơ bản về Deep Learning và kiến trúc Transformer.</li>
+  <li>Thành thạo PyTorch để train model.</li>
+  <li>Biết fine-tune LLM open-source (LLaMA 3, Mistral, Qwen) với LoRA/QLoRA.</li>
+  <li>Hoàn thành chatbot chuyên ngành dựa trên dữ liệu riêng.</li>
+</ul>
+
+<h2>📅 Tuần 1 – Deep Learning cơ bản & PyTorch</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Nắm được nền tảng Deep Learning và sử dụng PyTorch.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Neural Network cơ bản: neuron, layer, activation function.</li>
+      <li>Backpropagation & gradient descent.</li>
+      <li>PyTorch cơ bản: Tensor, Dataset, DataLoader, nn.Module.</li>
+      <li>Train model đơn giản (MNIST).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Cài PyTorch (GPU nếu có).</li>
+      <li>Viết model MLP phân loại ảnh MNIST.</li>
+      <li>Train, evaluate, và lưu model.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Hiểu cách train model Deep Learning, thành thạo PyTorch cơ bản.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://pytorch.org/tutorials/">PyTorch Tutorials</a></li>
+</ul>
+
+<h2>📅 Tuần 2 – Transformer & LLM Architecture</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Hiểu cách LLM hoạt động.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Kiến trúc Transformer: Attention, Multi-head Attention, Feed-forward.</li>
+      <li>Tokenization (BPE, SentencePiece).</li>
+      <li>So sánh GPT, BERT, LLaMA, Mistral.</li>
+      <li>Hugging Face Transformers cơ bản.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Load model BERT từ Hugging Face.</li>
+      <li>Tokenize văn bản và chạy inference.</li>
+      <li>Viết script tóm tắt văn bản bằng model pre-trained.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Hiểu cấu trúc Transformer, biết load và chạy model từ Hugging Face.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></li>
+</ul>
+
+<h2>📅 Tuần 3 – Fine-tune LLM với LoRA/QLoRA</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Tinh chỉnh LLM open-source cho dữ liệu riêng.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>LoRA & QLoRA (Low-Rank Adaptation) – fine-tune tiết kiệm tài nguyên.</li>
+      <li>Chuẩn bị dữ liệu huấn luyện (JSON, Alpaca format).</li>
+      <li>Sử dụng transformers + peft để fine-tune.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Chọn model (LLaMA 3 8B, Mistral 7B, Qwen 7B).</li>
+      <li>Chuẩn bị dữ liệu Q&A chuyên ngành (ví dụ: tài liệu công ty).</li>
+      <li>Fine-tune model với QLoRA.</li>
+      <li>Lưu model và test local bằng Ollama.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Có model LLM đã fine-tune cho dữ liệu riêng, chạy được local.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://huggingface.co/docs/peft/index">PEFT Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 4 – Tích hợp LLM Fine-tune vào Chatbot</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Nâng cấp chatbot nội bộ thành chatbot chuyên ngành.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Kết hợp RAG + LLM fine-tune.</li>
+      <li>Tối ưu prompt cho model fine-tune.</li>
+      <li>Triển khai model với vLLM để tăng tốc.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Tích hợp model fine-tune vào API Node.js.</li>
+      <li>Kết hợp Qdrant để tìm kiếm tài liệu.</li>
+      <li>Tối ưu prompt để model trả lời chính xác.</li>
+      <li>Deploy API lên server GPU.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Chatbot chuyên ngành chạy trên model fine-tune, trả lời chính xác hơn.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://docs.vllm.ai/en/latest/">vLLM Docs</a></li>
+</ul>
+
+<h2>🚀 Mini Project cuối tháng – Chatbot chuyên ngành</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Áp dụng toàn bộ kiến thức tháng 3.</li>
+  <li><strong>Yêu cầu:</strong>
+    <ul>
+      <li>Input: câu hỏi chuyên ngành (ví dụ: luật, y tế, kỹ thuật).</li>
+      <li>Output: câu trả lời chính xác dựa trên dữ liệu huấn luyện.</li>
+      <li>Có thể chạy local hoặc cloud.</li>
+    </ul>
+  </li>
+  <li><strong>Tech stack:</strong> Python + PyTorch + Hugging Face + PEFT + Qdrant + Node.js API.</li>
+  <li><strong>Kết quả:</strong> Chatbot chuyên ngành chạy trên model fine-tune, có thể demo cho khách hàng hoặc đưa vào portfolio.</li>
+</ul>

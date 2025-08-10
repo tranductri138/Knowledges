@@ -1,0 +1,117 @@
+<h1>Tháng 2 – Python cho AI & Xử lý dữ liệu</h1>
+
+<h2>🎯 Mục tiêu tháng</h2>
+<ul>
+  <li>Thành thạo Python cơ bản và các thư viện AI phổ biến.</li>
+  <li>Biết cách xử lý dữ liệu (text, CSV, JSON, hình ảnh).</li>
+  <li>Biết train model ML cơ bản với scikit-learn.</li>
+  <li>Hoàn thành dự án AI phân tích feedback khách hàng.</li>
+</ul>
+
+<h2>📅 Tuần 1 – Python cơ bản cho AI</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Làm quen Python nhanh chóng để dùng cho AI.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Cú pháp Python cơ bản (biến, hàm, class, import).</li>
+      <li>Làm việc với file (CSV, JSON, TXT).</li>
+      <li>Virtual environment (venv, conda).</li>
+      <li>Cài đặt thư viện (pip, poetry).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Viết script Python đọc file CSV và in ra dữ liệu.</li>
+      <li>Viết script Python đọc JSON và lọc dữ liệu theo điều kiện.</li>
+      <li>Tạo virtual environment và cài numpy, pandas.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Thành thạo cú pháp Python cơ bản, biết đọc/ghi file dữ liệu.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://docs.python.org/3/tutorial/">Python Official Tutorial</a></li>
+</ul>
+
+<h2>📅 Tuần 2 – Xử lý dữ liệu với Pandas & Numpy</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Làm chủ Pandas và Numpy để xử lý dữ liệu.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Pandas: DataFrame, Series, lọc dữ liệu, group, merge.</li>
+      <li>Numpy: mảng, ma trận, phép toán vector.</li>
+      <li>Làm sạch dữ liệu (xử lý giá trị null, duplicate).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Đọc file CSV feedback khách hàng.</li>
+      <li>Lọc feedback theo ngày, theo rating.</li>
+      <li>Tính toán thống kê (trung bình, min, max).</li>
+      <li>Vẽ biểu đồ đơn giản với matplotlib.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Biết xử lý dữ liệu dạng bảng, tính toán thống kê cơ bản.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://pandas.pydata.org/docs/">Pandas Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 3 – Xử lý dữ liệu văn bản (Text Processing)</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Làm sạch và chuẩn bị dữ liệu text cho AI.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Tokenization (chia từ).</li>
+      <li>Stopwords, stemming, lemmatization.</li>
+      <li>TF-IDF vectorization.</li>
+      <li>Sử dụng nltk, scikit-learn cho text processing.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Làm sạch feedback khách hàng (bỏ ký tự đặc biệt, lowercase).</li>
+      <li>Tokenize và loại bỏ stopwords.</li>
+      <li>Chuyển text thành vector TF-IDF.</li>
+      <li>Lưu vector để dùng cho model.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Biết xử lý dữ liệu text để train model.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://www.nltk.org/">NLTK Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 4 – Machine Learning cơ bản với Scikit-learn</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Train model ML cơ bản.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Supervised Learning: Classification, Regression.</li>
+      <li>Train/Test split.</li>
+      <li>Model evaluation (accuracy, precision, recall, F1-score).</li>
+      <li>Lưu model (joblib).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Train model phân loại feedback (tích cực / tiêu cực) bằng Logistic Regression.</li>
+      <li>Đánh giá model bằng accuracy và F1-score.</li>
+      <li>Lưu model và viết API FastAPI để gọi model.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Có model ML cơ bản chạy được qua API.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://scikit-learn.org/stable/">Scikit-learn Docs</a></li>
+</ul>
+
+<h2>🚀 Mini Project cuối tháng – AI phân tích feedback khách hàng</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Áp dụng toàn bộ kiến thức tháng 2.</li>
+  <li><strong>Yêu cầu:</strong>
+    <ul>
+      <li>Input: file CSV feedback khách hàng.</li>
+      <li>Output:
+        <ul>
+          <li>Thống kê số feedback tích cực / tiêu cực.</li>
+          <li>Tóm tắt nội dung chính.</li>
+          <li>Xuất kết quả ra JSON.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Tech stack:</strong> Python + Pandas + Numpy + NLTK + Scikit-learn + FastAPI + Docker.</li>
+  <li><strong>Kết quả:</strong> API AI phân tích feedback chạy được trên server, có thể tích hợp vào backend Node.js.</li>
+</ul>

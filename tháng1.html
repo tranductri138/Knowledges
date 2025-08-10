@@ -1,0 +1,122 @@
+<h1>Tháng 1 – Làm quen AI, Prompt Engineering & Chatbot nội bộ</h1>
+
+<h2>🎯 Mục tiêu tháng</h2>
+<ul>
+  <li>Hiểu cơ bản về AI, LLM, Embedding, RAG.</li>
+  <li>Thành thạo Prompt Engineering cơ bản & nâng cao.</li>
+  <li>Biết gọi API AI (OpenAI, Ollama).</li>
+  <li>Biết dùng Vector DB (Qdrant) để tìm kiếm thông minh.</li>
+  <li>Xây dựng chatbot nội bộ có thể trả lời dựa trên tài liệu công ty.</li>
+</ul>
+
+<h2>📅 Tuần 1 – LLM cơ bản & Gọi API</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Hiểu LLM là gì, cách hoạt động, và gọi API AI cơ bản.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Khái niệm: AI, ML, DL, LLM.</li>
+      <li>Transformer, token, context window.</li>
+      <li>OpenAI API (Chat Completion, Embedding).</li>
+      <li>Cài môi trường Node.js + Python cho AI.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Tạo tài khoản OpenAI, lấy API key.</li>
+      <li>Viết script Node.js gọi GPT-4o để trả lời câu hỏi.</li>
+      <li>Viết script Python gọi GPT-4o để tóm tắt văn bản.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Gọi API GPT-4o từ Node.js và Python thành công.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://platform.openai.com/docs">OpenAI API Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 1.5 – Prompt Engineering</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Viết prompt hiệu quả để điều khiển LLM.</li>
+  <li><strong>Kỹ thuật:</strong>
+    <ul>
+      <li>Zero-shot</li>
+      <li>Few-shot</li>
+      <li>Chain-of-Thought (CoT)</li>
+      <li>Role Prompting</li>
+      <li>Output Formatting</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Viết prompt zero-shot để tóm tắt văn bản.</li>
+      <li>Viết prompt few-shot để phân loại email spam.</li>
+      <li>Viết prompt role-based để AI đóng vai backend dev tư vấn kiến trúc.</li>
+      <li>Viết prompt yêu cầu output JSON và parse trong Node.js.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Có bộ prompt mẫu tái sử dụng.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://www.promptingguide.ai/">Prompt Engineering Guide</a></li>
+</ul>
+
+<h2>📅 Tuần 2 – Vector Database & Semantic Search</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Hiểu Embedding và tìm kiếm thông minh.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Embedding (biểu diễn văn bản thành vector).</li>
+      <li>Qdrant (Vector Database).</li>
+      <li>Semantic Search (tìm kiếm theo ý nghĩa).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Cài Qdrant local (Docker).</li>
+      <li>Dùng OpenAI Embedding API để tạo vector cho tài liệu.</li>
+      <li>Lưu vector vào Qdrant.</li>
+      <li>Viết API Node.js tìm kiếm tài liệu theo câu hỏi.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> API tìm kiếm thông minh hoạt động.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://qdrant.tech/documentation/">Qdrant Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 3 – Chạy LLM Local với Ollama</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Chạy LLM open-source trên máy.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Ollama (chạy LLaMA 3, Mistral, Qwen local).</li>
+      <li>So sánh LLM cloud vs local.</li>
+      <li>Gọi Ollama API từ Node.js.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Cài Ollama.</li>
+      <li>Tải model LLaMA 3 hoặc Mistral.</li>
+      <li>Viết API Node.js gọi Ollama để trả lời câu hỏi.</li>
+      <li>So sánh tốc độ và chi phí với OpenAI API.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Chạy LLM local thành công.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://ollama.com/docs">Ollama Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 4 – Chatbot Nội Bộ (Mini Project)</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Kết hợp kiến thức để làm chatbot RAG thông minh.</li>
+  <li><strong>Pipeline:</strong> User query → Embedding → Search Vector DB → LLM trả lời.</li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Chuẩn bị tài liệu công ty (PDF, TXT).</li>
+      <li>Chia nhỏ tài liệu → tạo embedding → lưu vào Qdrant.</li>
+      <li>Viết API Node.js:
+        <ul>
+          <li>Nhận câu hỏi từ user.</li>
+          <li>Tìm tài liệu liên quan trong Qdrant.</li>
+          <li>Gửi tài liệu + câu hỏi vào LLM (OpenAI hoặc Ollama) với prompt role-based.</li>
+        </ul>
+      </li>
+      <li>Deploy API lên server Linux.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Chatbot nội bộ trả lời dựa trên tài liệu công ty.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://www.pinecone.io/learn/retrieval-augmented-generation/">RAG Concept</a></li>
+</ul>

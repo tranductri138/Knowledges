@@ -1,0 +1,100 @@
+<h1>Tháng 4 – AI Agent & RAG nâng cao</h1>
+
+<h2>🎯 Mục tiêu tháng</h2>
+<ul>
+  <li>Biết cách xây dựng AI Agent có thể dùng nhiều công cụ (tool) để tự động hóa công việc.</li>
+  <li>Thành thạo RAG nâng cao (Retrieval-Augmented Generation) để xử lý dữ liệu lớn.</li>
+  <li>Tích hợp multi-modal AI (text + hình ảnh + file PDF).</li>
+  <li>Hoàn thành AI trợ lý cá nhân có thể tìm kiếm web, đọc file, phân tích dữ liệu.</li>
+</ul>
+
+<h2>📅 Tuần 1 – AI Agent Cơ Bản</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Hiểu AI Agent là gì và cách hoạt động.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Khái niệm AI Agent: LLM + Tool + Memory.</li>
+      <li>So sánh các framework 2025:
+        <ul>
+          <li>OpenAI Assistants API</li>
+          <li>LlamaIndex</li>
+          <li>Haystack</li>
+        </ul>
+      </li>
+      <li>Cách AI Agent gọi API, tìm kiếm web, đọc file.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Tạo AI Agent với OpenAI Assistants API.</li>
+      <li>Thêm tool “Web Search” (SerpAPI hoặc Tavily).</li>
+      <li>Thêm tool “Read PDF” (PyMuPDF).</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> AI Agent có thể trả lời câu hỏi bằng cách tìm kiếm web và đọc file PDF.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://platform.openai.com/docs/assistants/overview">OpenAI Assistants API Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 2 – RAG Nâng Cao</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Xây dựng pipeline RAG tối ưu cho dữ liệu lớn.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>RAG cơ bản vs RAG nâng cao.</li>
+      <li>Chunking thông minh (Adaptive Chunking).</li>
+      <li>Vector DB nâng cao: Qdrant, Weaviate, Milvus.</li>
+      <li>Re-ranking kết quả tìm kiếm (BM25 + Embedding).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Chia tài liệu công ty thành chunk tối ưu.</li>
+      <li>Lưu vào Qdrant với metadata (ngày, loại tài liệu).</li>
+      <li>Viết API tìm kiếm + re-rank kết quả.</li>
+      <li>Tích hợp vào chatbot.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Chatbot trả lời chính xác hơn nhờ RAG nâng cao.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://qdrant.tech/documentation/">Qdrant Advanced Search</a></li>
+</ul>
+
+<h2>📅 Tuần 3 – Multi-modal AI</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Xử lý nhiều loại dữ liệu (text, hình ảnh, âm thanh).</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Multi-modal model: CLIP, BLIP, GPT-4o, Qwen-VL.</li>
+      <li>OCR (nhận diện chữ trong ảnh) với Tesseract hoặc PaddleOCR.</li>
+      <li>Phân tích hình ảnh và kết hợp với text.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Tích hợp GPT-4o để phân tích ảnh.</li>
+      <li>Dùng CLIP để tìm ảnh theo mô tả.</li>
+      <li>Dùng OCR để đọc văn bản từ ảnh và đưa vào RAG.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> AI Agent có thể đọc ảnh, PDF scan, và trả lời câu hỏi về nội dung.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://platform.openai.com/docs/guides/multimodal">OpenAI GPT-4o Multi-modal</a></li>
+</ul>
+
+<h2>📅 Tuần 4 – AI Trợ Lý Cá Nhân (Mini Project)</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Kết hợp tất cả kiến thức tháng 4.</li>
+  <li><strong>Yêu cầu:</strong>
+    <ul>
+      <li>AI Agent có thể:
+        <ul>
+          <li>Tìm kiếm web.</li>
+          <li>Đọc và phân tích file PDF, DOCX, CSV.</li>
+          <li>Phân tích hình ảnh.</li>
+          <li>Trả lời dựa trên dữ liệu nội bộ (RAG).</li>
+        </ul>
+      </li>
+      <li>Có giao diện web đơn giản (React hoặc Next.js).</li>
+    </ul>
+  </li>
+  <li><strong>Tech stack:</strong> Backend: Python (FastAPI) hoặc Node.js; AI: OpenAI Assistants API / LLaMA 3 + LlamaIndex; Vector DB: Qdrant; Frontend: React/Next.js.</li>
+  <li><strong>Kết quả:</strong> AI Trợ lý cá nhân chạy được local hoặc cloud, có thể demo cho khách hàng hoặc dùng nội bộ.</li>
+</ul>

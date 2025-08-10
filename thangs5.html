@@ -1,0 +1,115 @@
+<h1>Tháng 5 – Triển khai AI Quy Mô Lớn & Tối Ưu Hiệu Năng</h1>
+
+<h2>🎯 Mục tiêu tháng</h2>
+<ul>
+  <li>Biết cách deploy AI model (LLM, RAG pipeline) lên server GPU hoặc cloud.</li>
+  <li>Tối ưu tốc độ inference với vLLM, quantization, batching.</li>
+  <li>Tích hợp CI/CD cho AI app.</li>
+  <li>Giám sát hiệu năng và chi phí.</li>
+  <li>Hoàn thành AI service production-ready.</li>
+</ul>
+
+<h2>📅 Tuần 1 – Triển khai model với vLLM</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Chạy LLM nhanh hơn và phục vụ nhiều request song song.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>vLLM là gì? (LLM serving engine tối ưu tốc độ và memory).</li>
+      <li>So sánh vLLM vs Hugging Face Transformers vs Ollama.</li>
+      <li>Cài đặt vLLM và deploy model.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Cài vLLM: <code>pip install vllm</code></li>
+      <li>Chạy LLaMA 3 8B với vLLM:
+        <pre><code>python -m vllm.entrypoints.api_server \
+  --model meta-llama/Meta-Llama-3-8B \
+  --port 8000</code></pre>
+      </li>
+      <li>Gọi API từ Node.js hoặc Python.</li>
+      <li>Benchmark tốc độ so với Hugging Face.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Model chạy nhanh hơn 2-4 lần, có API LLM phục vụ nhiều user cùng lúc.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://docs.vllm.ai/en/latest/">vLLM Docs</a></li>
+</ul>
+
+<h2>📅 Tuần 2 – Quantization & Tối ưu bộ nhớ</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Giảm VRAM cần thiết để chạy model.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Quantization là gì? (giảm độ chính xác số từ FP16 → INT8/INT4).</li>
+      <li>Các phương pháp: GPTQ, AWQ, GGUF.</li>
+      <li>Trade-off giữa tốc độ, bộ nhớ, và chất lượng.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Dùng bitsandbytes để quantize model INT8.</li>
+      <li>Dùng llama.cpp hoặc Ollama để chạy model GGUF.</li>
+      <li>So sánh VRAM sử dụng trước và sau quantization.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Model chạy trên GPU nhỏ hơn (12GB VRAM vẫn chạy được LLaMA 3 8B).</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://github.com/TimDettmers/bitsandbytes">bitsandbytes</a></li>
+</ul>
+
+<h2>📅 Tuần 3 – Triển khai AI trên Cloud & CI/CD</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Đưa AI app lên cloud và tự động deploy.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Chọn hạ tầng: AWS EC2 GPU, GCP, Azure, Lambda Labs, RunPod.</li>
+      <li>Dockerize AI app.</li>
+      <li>CI/CD với GitHub Actions hoặc GitLab CI.</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Tạo Dockerfile cho AI API.</li>
+      <li>Deploy lên RunPod (GPU cloud giá rẻ).</li>
+      <li>Thiết lập GitHub Actions để auto deploy khi push code.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> AI app chạy trên cloud GPU, tự động deploy khi cập nhật code.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://www.runpod.io/">RunPod</a></li>
+</ul>
+
+<h2>📅 Tuần 4 – Giám sát & Tối ưu chi phí</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Theo dõi hiệu năng và giảm chi phí vận hành.</li>
+  <li><strong>Nội dung học:</strong>
+    <ul>
+      <li>Logging & Monitoring: Prometheus + Grafana.</li>
+      <li>Tracking request & latency.</li>
+      <li>Tối ưu batch request để giảm chi phí.</li>
+      <li>Cache kết quả AI (Redis, Memcached).</li>
+    </ul>
+  </li>
+  <li><strong>Thực hành:</strong>
+    <ol>
+      <li>Tích hợp Prometheus để log số request, thời gian xử lý.</li>
+      <li>Dùng Redis cache kết quả query lặp lại.</li>
+      <li>Tối ưu batch request trong vLLM.</li>
+    </ol>
+  </li>
+  <li><strong>Kết quả cuối tuần:</strong> Có dashboard giám sát AI app, giảm chi phí GPU 20-40% nhờ cache & batching.</li>
+  <li><strong>Tài nguyên:</strong> <a href="https://prometheus.io/docs/introduction/overview/">Prometheus Docs</a></li>
+</ul>
+
+<h2>🚀 Mini Project cuối tháng – AI Service Production</h2>
+<ul>
+  <li><strong>Mục tiêu:</strong> Hoàn thiện AI app sẵn sàng production.</li>
+  <li><strong>Yêu cầu:</strong>
+    <ul>
+      <li>Model LLM fine-tune từ Tháng 3.</li>
+      <li>RAG nâng cao từ Tháng 4.</li>
+      <li>Deploy với vLLM + quantization.</li>
+      <li>CI/CD + monitoring.</li>
+      <li>Tối ưu chi phí.</li>
+    </ul>
+  </li>
+  <li><strong>Kết quả:</strong> AI service chạy ổn định, nhanh, rẻ, phục vụ hàng nghìn request/ngày.</li>
+</ul>
